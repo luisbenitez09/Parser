@@ -34,9 +34,11 @@ public class view extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         error = new javax.swing.JLabel();
         errores = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tabla = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(955, 300));
+        setMinimumSize(new java.awt.Dimension(1000, 500));
         getContentPane().setLayout(null);
 
         entrada.setColumns(20);
@@ -66,7 +68,14 @@ public class view extends javax.swing.JFrame {
 
         errores.setFont(new java.awt.Font("Lato", 0, 12)); // NOI18N
         getContentPane().add(errores);
-        errores.setBounds(520, 80, 410, 140);
+        errores.setBounds(270, 190, 230, 30);
+
+        tabla.setColumnSelectionAllowed(true);
+        jScrollPane2.setViewportView(tabla);
+        tabla.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+
+        getContentPane().add(jScrollPane2);
+        jScrollPane2.setBounds(520, 50, 454, 404);
 
         pack();
         setLocationRelativeTo(null);
@@ -115,5 +124,7 @@ public class view extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    public javax.swing.JTable tabla;
     // End of variables declaration//GEN-END:variables
 }
